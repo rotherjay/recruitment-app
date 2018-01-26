@@ -1,5 +1,5 @@
-import acl.UserPasswordEncoderListener
+import asti.csd.recruitment.acl.AdminAccountPasswordEncoderListener
 // Place your Spring DSL code here
 beans = {
-    userPasswordEncoderListener(UserPasswordEncoderListener)
+    adminAccountPasswordEncoderListener(AdminAccountPasswordEncoderListener)
 }

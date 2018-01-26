@@ -1,13 +1,14 @@
 package recruitment
 
-import acl.*
+import asti.csd.recruitment.acl.*
 
 class BootStrap {
 
     def init = { servletContext ->
-    	Role admin = new Role(authority:"ROLE_ADMIN").save flush:true
-		AdminAccount user = new AdminAccount(emailAddress:"user", password:"pass").save flush:true
-		AdminAccountRole.create(user, admin, true)
+    	def role1 = new Role(authority:"ROLE_ADMIN").save flush:true
+	    def user1 = new AdminAccount(username:"admin",password:"admin").save flush:true
+	    AdminAccountRole.create(user1,role1)
+
     }
     def destroy = {
     }
